@@ -1,0 +1,1103 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "customer",
+        "sourceLineageTag": "[dbo].[customer]",
+        "columns": [
+          {
+            "name": "custkey",
+            "dataType": "int64",
+            "sourceColumn": "custkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "custkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "address",
+            "dataType": "string",
+            "sourceColumn": "address",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "address",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "nationkey",
+            "dataType": "int64",
+            "sourceColumn": "nationkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "nationkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "phone",
+            "dataType": "string",
+            "sourceColumn": "phone",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "phone",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "acctbal",
+            "dataType": "decimal",
+            "sourceColumn": "acctbal",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "acctbal",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mktsegment",
+            "dataType": "string",
+            "sourceColumn": "mktsegment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mktsegment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "customer",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "lineitem",
+        "sourceLineageTag": "[dbo].[lineitem]",
+        "columns": [
+          {
+            "name": "orderkey",
+            "dataType": "int64",
+            "sourceColumn": "orderkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "orderkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "partkey",
+            "dataType": "int64",
+            "sourceColumn": "partkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "partkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "suppkey",
+            "dataType": "int64",
+            "sourceColumn": "suppkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "suppkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "linenumber",
+            "dataType": "int64",
+            "sourceColumn": "linenumber",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "linenumber",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "quantity",
+            "dataType": "decimal",
+            "sourceColumn": "quantity",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "quantity",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "extendedprice",
+            "dataType": "decimal",
+            "sourceColumn": "extendedprice",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "extendedprice",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "discount",
+            "dataType": "decimal",
+            "sourceColumn": "discount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "discount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "tax",
+            "dataType": "decimal",
+            "sourceColumn": "tax",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "tax",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "returnflag",
+            "dataType": "string",
+            "sourceColumn": "returnflag",
+            "sourceProviderType": "char",
+            "sourceLineageTag": "returnflag",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "linestatus",
+            "dataType": "string",
+            "sourceColumn": "linestatus",
+            "sourceProviderType": "char",
+            "sourceLineageTag": "linestatus",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "shipdate",
+            "dataType": "dateTime",
+            "sourceColumn": "shipdate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "shipdate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "commitdate",
+            "dataType": "dateTime",
+            "sourceColumn": "commitdate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "commitdate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "receiptdate",
+            "dataType": "dateTime",
+            "sourceColumn": "receiptdate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "receiptdate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "shipinstruct",
+            "dataType": "string",
+            "sourceColumn": "shipinstruct",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "shipinstruct",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "shipmode",
+            "dataType": "string",
+            "sourceColumn": "shipmode",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "shipmode",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "lineitem",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "nation",
+        "sourceLineageTag": "[dbo].[nation]",
+        "columns": [
+          {
+            "name": "nationkey",
+            "dataType": "int64",
+            "sourceColumn": "nationkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "nationkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "regionkey",
+            "dataType": "int64",
+            "sourceColumn": "regionkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "regionkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "nation",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "orders",
+        "sourceLineageTag": "[dbo].[orders]",
+        "columns": [
+          {
+            "name": "orderkey",
+            "dataType": "int64",
+            "sourceColumn": "orderkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "orderkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "custkey",
+            "dataType": "int64",
+            "sourceColumn": "custkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "custkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "orderstatus",
+            "dataType": "string",
+            "sourceColumn": "orderstatus",
+            "sourceProviderType": "char",
+            "sourceLineageTag": "orderstatus",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "totalprice",
+            "dataType": "decimal",
+            "sourceColumn": "totalprice",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "totalprice",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "orderdate",
+            "dataType": "dateTime",
+            "sourceColumn": "orderdate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "orderdate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "orderpriority",
+            "dataType": "string",
+            "sourceColumn": "orderpriority",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "orderpriority",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "clerk",
+            "dataType": "string",
+            "sourceColumn": "clerk",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "clerk",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "shippriority",
+            "dataType": "int64",
+            "sourceColumn": "shippriority",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "shippriority",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "orders",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "part",
+        "sourceLineageTag": "[dbo].[part]",
+        "columns": [
+          {
+            "name": "partkey",
+            "dataType": "int64",
+            "sourceColumn": "partkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "partkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mfgr",
+            "dataType": "string",
+            "sourceColumn": "mfgr",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mfgr",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "brand",
+            "dataType": "string",
+            "sourceColumn": "brand",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "brand",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "type",
+            "dataType": "string",
+            "sourceColumn": "type",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "type",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "size",
+            "dataType": "int64",
+            "sourceColumn": "size",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "size",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "container",
+            "dataType": "string",
+            "sourceColumn": "container",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "container",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "retailprice",
+            "dataType": "decimal",
+            "sourceColumn": "retailprice",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "retailprice",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "part",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "partsupp",
+        "sourceLineageTag": "[dbo].[partsupp]",
+        "columns": [
+          {
+            "name": "partkey",
+            "dataType": "int64",
+            "sourceColumn": "partkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "partkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "suppkey",
+            "dataType": "int64",
+            "sourceColumn": "suppkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "suppkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "availqty",
+            "dataType": "int64",
+            "sourceColumn": "availqty",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "availqty",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "supplycost",
+            "dataType": "decimal",
+            "sourceColumn": "supplycost",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "supplycost",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "partsupp",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "region",
+        "sourceLineageTag": "[dbo].[region]",
+        "columns": [
+          {
+            "name": "regionkey",
+            "dataType": "int64",
+            "sourceColumn": "regionkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "regionkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "region",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "supplier",
+        "sourceLineageTag": "[dbo].[supplier]",
+        "columns": [
+          {
+            "name": "suppkey",
+            "dataType": "int64",
+            "sourceColumn": "suppkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "suppkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "sourceColumn": "name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "address",
+            "dataType": "string",
+            "sourceColumn": "address",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "address",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "nationkey",
+            "dataType": "int64",
+            "sourceColumn": "nationkey",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "nationkey",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "phone",
+            "dataType": "string",
+            "sourceColumn": "phone",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "phone",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "acctbal",
+            "dataType": "decimal",
+            "sourceColumn": "acctbal",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "acctbal",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "comment",
+            "dataType": "string",
+            "sourceColumn": "comment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "comment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "supplier",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}
