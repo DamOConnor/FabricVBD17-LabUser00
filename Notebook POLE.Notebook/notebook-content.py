@@ -148,6 +148,19 @@ def clean_column_names(df: DataFrame) -> DataFrame:
 
 # ## Main
 
+# CELL ********************
+
+# MAGIC %%sql
+# MAGIC # Drop all tables
+# MAGIC SHOW TABLES
+
+# METADATA ********************
+
+# META {
+# META   "language": "sparksql",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # MARKDOWN ********************
 
 # ### Get a clean file list
